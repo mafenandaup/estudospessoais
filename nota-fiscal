@@ -1,4 +1,4 @@
-package estudo;
+package oi;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -6,9 +6,10 @@ import java.time.format.DateTimeFormatter;
 import java.util.Random;
 import java.text.DecimalFormat;
 
-public class TESTENOTAFISCAK {
+public class crisseila {
 
 	public static void main(String[] args) {
+
 		nomemarca();
 		System.out.println("");
 		informações();
@@ -49,7 +50,20 @@ public class TESTENOTAFISCAK {
 		LocalTime tempo = LocalTime.now();
 		DateTimeFormatter tempoFormat = DateTimeFormatter.ofPattern("HH:mm:ss");
 		String time = tempo.format(tempoFormat);
-		System.out.println("ABERTO EM " + date + " , " + time);
+		System.out.println("ABERTO EM " + date + " ,  " + time);
+	}
+
+	public static void geneprint(int[] v) { // para gerar e imprimir o número do cartão
+		Random rd = new Random ();
+		for (int i = 0; i < v.length; i++) {
+			v[i] = rd.nextInt(9);
+		if (i<8) {
+			System.out.print("X");
+				
+			}else {
+				System.out.print(v[i]);
+			}
+		}
 	}
 
 	public static void pedido() {
@@ -61,19 +75,28 @@ public class TESTENOTAFISCAK {
 		double valor = liminf + (limsup - liminf) * rd.nextDouble();
 		DecimalFormat valorf = new DecimalFormat("##.##");
 		String valornovo = valorf.format(valor);
-		double total = valor+taxa;
+		double total = valor + taxa;
 		DecimalFormat totalf = new DecimalFormat("##.##");
 		String totalnovo = totalf.format(total);
-		System.out.println("      (Pedido N.: " + num + " )  ");
+		System.out.println("           (Pedido N.: " + num + " )  ");
 		System.out.println("ITEM (V.Unit.)                     Total");
-		System.out.println("1 Fat. Torta Doce (" + valornovo + ")          " +valornovo);
+		System.out.println("1 Fat. Torta Doce (" + valornovo + ")          " + valornovo);
 		System.out.println("---------------------------------------");
-		System.out.println("TOTAL:                             " +valornovo);
-		System.out.println("+ Tx. Adicional                     " +taxa);
-		System.out.println("= TOTAL A PAGAR:                   " +totalnovo);
+		System.out.println("TOTAL:                             " + valornovo);
+		System.out.println("+ Tx. Adicional                     " + taxa);
+		System.out.println("= TOTAL A PAGAR:                   " + totalnovo);
+		System.out.println("---------------------------------------");
+		System.out.println("FORMA DE PAGAMENTO           VALOR PAGO");
+		System.out.println("CT credito                         " +totalnovo);
+		System.out.println("");
+		System.out.println("NUM. CARTAO");
+		int cartao[] = new int[12];
+		geneprint(cartao);
+		System.out.println("  ");
+		System.out.println(" ");
 		System.out.println("Atendente: Cecília");
 		System.out.println("        ");
-		System.out.println( "                 ***                     " );
+		System.out.println("                 ***                     ");
 		System.out.println("         ");
 		System.out.println("Obrigado por sua compra! Volte sempre =)");
 	}
