@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "crisseila",
+            "request": "launch",
+            "mainClass": "novoestudo.crisseila",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "então",
+            "request": "launch",
+            "mainClass": "então",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "crisseila",
+            "request": "launch",
+            "mainClass": "oi.crisseila",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"
