@@ -8,6 +8,13 @@
             "type": "java",
             "name": "crisseila",
             "request": "launch",
+            "mainClass": "crisseila",
+            "projectName": "estudospessoais_19fedaf6"
+        },
+        {
+            "type": "java",
+            "name": "crisseila",
+            "request": "launch",
             "mainClass": "novoestudo.crisseila",
             "projectName": ""
         },
