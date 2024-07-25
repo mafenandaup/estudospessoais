@@ -11,6 +11,7 @@ public class todolist {
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         inicio();
+        newtask();
     }
 
     public static void inicio() throws InterruptedException {
@@ -30,6 +31,9 @@ public class todolist {
         if (answer.equalsIgnoreCase("Y")){
           System.out.println("digite a tarefa que gostaria de inserir");
           String tarefa = sc.nextLine();
+        } else if (answer.equalsIgnoreCase("N")) {
+            inicio();
+            newtask();
     }
    
     }
