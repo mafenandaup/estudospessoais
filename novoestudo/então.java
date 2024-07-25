@@ -4,14 +4,15 @@ import java.util.Scanner;
 public class então {
 
     public static void main(String[] args) throws InterruptedException{
-        Scanner sc = New Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         start();
         String name = sc.nextLine();
-        nome(String name);
+        nome(name);
     
     }
 
     public static void reps(int i) {
+        
     }
 
     public static void start() throws InterruptedException {
@@ -24,11 +25,13 @@ public class então {
         System.out.println("Qual seu nome, afinal?");
 
     }
-    public static void nome (String s){
-        String[] letras = new String[s.length()];
+    public static void nome(String s) throws InterruptedException  {
+        String[] letras = new String[s.length()]; 
         char[] charLetras = s.replace(" ", "").toCharArray();
-        for(int i=0; i<s.length();i++){
+        for (int i = 0; i < s.length(); i++) {
             letras[i] = String.valueOf(charLetras[i]);
+            System.out.println("Prazer em conhecê-lo, " +s);
+            Thread.sleep(300);
         }
     }
 }
