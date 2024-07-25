@@ -1,10 +1,6 @@
-import java.sql.Time;
-import java.text.DateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.Scanner;
-import java.util.TimeZone;
 
 public class todolist {
 
@@ -24,16 +20,18 @@ public class todolist {
         System.out.println("--------------");
     }
 
-    public static void newtask (){
+    public static void newtask() throws InterruptedException {
         Scanner sc = new Scanner(System.in);
-        System.out.println("gostaria de adicionar uma tarefa? (Y/n)");
+        System.out.println("Gostaria de adicionar uma tarefa? (Y/n)");
         String answer = sc.nextLine();
-        if (answer.equalsIgnoreCase("Y")){
-          System.out.println("digite a tarefa que gostaria de inserir");
-          String tarefa = sc.nextLine();
+        if (answer.equalsIgnoreCase("Y")) {
+            System.out.println("Digite a tarefa que gostaria de inserir:");
+            String tarefa = sc.nextLine();
+            // Aqui você pode fazer algo com a variável 'tarefa', como armazená-la em uma
+            // lista, por exemplo.
         } else if (answer.equalsIgnoreCase("N")) {
             inicio();
             newtask();
+        }
     }
-   
-    }
+}
