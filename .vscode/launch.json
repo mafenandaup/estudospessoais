@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "string",
+            "request": "launch",
+            "mainClass": "string",
+            "projectName": "estudospessoais_19fedaf6"
+        },
+        {
+            "type": "java",
             "name": "crisseila",
             "request": "launch",
             "mainClass": "crisseila",

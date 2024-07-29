@@ -2,7 +2,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class todolist {
+public class todolistunfinished {
 
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
